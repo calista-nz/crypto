@@ -1,0 +1,203 @@
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 8%;
+
+  color: #ddd;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(10, 10, 20, 0.65);
+  backdrop-filter: blur(12px);
+
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Logo */
+
+.navbar .logo {
+  width: max(10vw, 120px);
+  object-fit: contain;
+}
+
+
+/* Navigation */
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #bdbdbd;
+
+  transition: 0.2s;
+}
+
+.navbar li:hover {
+  color: white;
+}
+
+
+/* Right side */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  width: auto;
+}
+
+
+/* Currency selector */
+
+.navbar select {
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.navbar select:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar select:focus {
+  border-color: #7927ff;
+}
+
+
+/* Dropdown options */
+
+.navbar select option {
+  background: #1a1a1f;
+  color: white;
+}
+
+
+/* Sign up button */
+
+.navbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 20px;
+
+  border-radius: 22px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #393939;
+
+  background: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.navbar button:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.15);
+}
+
+.navbar button img {
+  width: 14px;
+  height: 14px;
+
+  object-fit: contain;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .logo {
+    width: 110px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .navbar select {
+    padding: 8px 8px;
+    font-size: 13px;
+  }
+
+  .navbar button {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  .navbar button img {
+    width: 12px;
+    height: 12px;
+  }
+
+}
